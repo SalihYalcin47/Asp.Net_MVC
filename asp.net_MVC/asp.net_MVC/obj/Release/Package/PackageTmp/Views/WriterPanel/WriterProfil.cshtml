@@ -1,0 +1,40 @@
+﻿@model EntityLayer.Concrete.Writer
+@{
+    ViewBag.Title = "WriterProfil";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+<br />
+ <h2 style="text-align:center">Profil Güncelle</h2>
+<br />
+@using (Html.BeginForm("WriterProfil", "WriterPanel", FormMethod.Post , new { enctype = "multipart/form-data"}))
+{
+    <div class="form-control h-100">
+        <br />
+        @Html.HiddenFor(x => x.WriterID)
+
+        @Html.Label("Yazar Adı : ")
+        @Html.TextBoxFor(x => x.WriterName, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yazar Soyadı : ")
+        @Html.TextBoxFor(x => x.WriterSurname, new { @class = "form-control" })
+        <br />
+        <input type="file" class="form-control p-1" name="WriterImage" />
+        <br />
+        @Html.Label("Yazar Hakkında : ")
+        @Html.TextBoxFor(x => x.WriterAbout, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yazar Mail Adresi : ")
+        @Html.TextBoxFor(x => x.WriterMail, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yazar Şifresi : ")
+        @Html.TextBoxFor(x => x.WriterPassword, new { @class = "form-control" })
+        <br />
+        @Html.Label("Yazar Lakabı : ")
+        @Html.TextBoxFor(x => x.WriterTitle, new { @class = "form-control" })
+        <br />
+        <button class="btn btn-success w-100" type="submit">Güncelle</button>
+    </div>
+}
+
+
+

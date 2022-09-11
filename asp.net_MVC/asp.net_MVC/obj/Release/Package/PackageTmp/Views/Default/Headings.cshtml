@@ -1,0 +1,114 @@
+﻿@using EntityLayer.Concrete
+@model List<Heading>
+@{
+    Layout = null;
+}
+
+
+
+<html lang="en">
+<head>
+    <script src="~/AdminLTE-3.0.4/plugins/jquery/jquery.min.js"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+    <!-- IonIcons -->
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<!--
+BODY TAG OPTIONS:
+=================
+Apply one or more of the following classes to to the body tag
+to get the desired effect
+|---------------------------------------------------------|
+|LAYOUT OPTIONS | sidebar-collapse                        |
+|               | sidebar-mini                            |
+|---------------------------------------------------------|
+-->
+<body class="hold-transition sidebar-mini">
+
+        <!-- Left navbar links -->
+               
+
+    <div class="wrapper">
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <div style="margin-top: -32px;">
+                <a href="/Home/HomePage/" class="brand-link" style="padding: 25px; margin-top: 40px;">
+                    <img src="https://thesupertek.com/wp-content/uploads/2020/09/ASP.net_.png" alt="AdminLTE Logo" class="brand-image bg-light img-circle elevation-3"
+                         style="opacity: .8;    margin-left: -1.2rem;">
+                    <span class="brand-text font-weight-light text-light">Başlık Paneli</span>
+                </a>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+
+                        @foreach (var item in Model)
+                        {
+                            <li class="nav-item">
+                                <a href="/Default/Headings/@item.HeadingID" class="nav-link">
+                                    <p>
+                                        @if (@item.HeadingName.Length <= 20)
+                                        {
+                                            @item.HeadingName
+                                        }
+                                        @if (@item.HeadingName.Length >= 20)
+                                        {
+                                            @item.HeadingName.Substring(0, 20)
+                                        <p>...</p>
+                                    }
+                                        </p>
+                                    </a>
+                                </li>
+                                <hr style="color: white; width: -webkit-fill-available; margin-top: 2px; margin-bottom: 5px; border: 1px solid white; " />
+                            }
+
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+              <div class="content-wrapper">
+                  <a class="nav-link" data-widget="pushmenu" href="#" style=" margin-left: 11px; font-size: 29px;padding:11px;"><i class="fas fa-bars"></i></a>
+                  <!-- Main content -->
+                  <div class="content">
+                      
+                      @Html.Action("Index", "Default")
+
+                  </div>
+                  <!-- /.content -->
+              </div>
+    </div>
+    <!-- ./wrapper -->
+    <!-- REQUIRED SCRIPTS -->
+    <!-- jQuery -->
+    <!-- Bootstrap -->
+    <script src="~/AdminLTE-3.0.4/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE -->
+    <script src="~/AdminLTE-3.0.4/dist/js/adminlte.js"></script>
+
+    <!-- OPTIONAL SCRIPTS -->
+    <script src="~/AdminLTE-3.0.4/plugins/chart.js/Chart.min.js"></script>
+    <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
+    <script src="~/AdminLTE-3.0.4/dist/js/pages/dashboard3.js"></script>
+
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- Page Script -->
+    <script>
+        $(function () {
+            //Add text editor
+            $('#compose-textarea').summernote().noConflict;
+        })
+    </script>
+</body>
+</html>

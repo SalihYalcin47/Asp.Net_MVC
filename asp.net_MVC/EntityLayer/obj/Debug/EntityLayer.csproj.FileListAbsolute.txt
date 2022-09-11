@@ -1,0 +1,12 @@
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\bin\Debug\EntityLayer.dll.config
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\bin\Debug\EntityLayer.dll
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\bin\Debug\EntityLayer.pdb
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\bin\Debug\EntityFramework.dll
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\bin\Debug\EntityFramework.xml
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\obj\Debug\EntityLayer.dll
+D:\Asp.Net_Web_App\asp.net_MVC\EntityLayer\obj\Debug\EntityLayer.pdb
