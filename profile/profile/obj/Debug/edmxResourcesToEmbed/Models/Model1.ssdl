@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Skill_Profile_EntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Dillers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DillAD" Type="nvarchar(max)" />
+    <Property Name="DEGER" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Yeteneklers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="YetenekAD" Type="nvarchar(max)" />
+    <Property Name="DEGER" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Skill_Profile_EntityModelStoreContainer">
+    <EntitySet Name="Dillers" EntityType="Self.Dillers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Yeteneklers" EntityType="Self.Yeteneklers" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

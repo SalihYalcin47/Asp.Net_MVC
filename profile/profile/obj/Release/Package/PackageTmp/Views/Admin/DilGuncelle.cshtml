@@ -1,0 +1,22 @@
+﻿@model profile.Models.Diller
+@{
+    ViewBag.Title = "DilGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>Dil Adı :</label><br />
+        @Html.TextBoxFor(x => x.DillAD, new { @class = "form-control" })
+    </div>
+    <br />
+    <div>
+        <label>Dil Değeri :</label><br />
+        @Html.TextBoxFor(x => x.DEGER, new { @class = "form-control" })
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-success form-control">Güncelle</button>
+    </div>
+</form>
+

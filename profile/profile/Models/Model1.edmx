@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Skill_Profile_EntityModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Dillers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DillAD" Type="nvarchar(max)" />
+          <Property Name="DEGER" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Yeteneklers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="YetenekAD" Type="nvarchar(max)" />
+          <Property Name="DEGER" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Skill_Profile_EntityModelStoreContainer">
+          <EntitySet Name="Dillers" EntityType="Self.Dillers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Yeteneklers" EntityType="Self.Yeteneklers" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Skill_Profile_EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Diller">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DillAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DEGER" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Yetenekler">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="YetenekAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="DEGER" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="Skill_Profile_EntityEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Dillers" EntityType="Self.Diller" />
+          <EntitySet Name="Yeteneklers" EntityType="Self.Yetenekler" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Skill_Profile_EntityModelStoreContainer" CdmEntityContainer="Skill_Profile_EntityEntities">
+          <EntitySetMapping Name="Dillers">
+            <EntityTypeMapping TypeName="Skill_Profile_EntityModel.Diller">
+              <MappingFragment StoreEntitySet="Dillers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="DillAD" ColumnName="DillAD" />
+                <ScalarProperty Name="DEGER" ColumnName="DEGER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Yeteneklers">
+            <EntityTypeMapping TypeName="Skill_Profile_EntityModel.Yetenekler">
+              <MappingFragment StoreEntitySet="Yeteneklers">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="YetenekAD" ColumnName="YetenekAD" />
+                <ScalarProperty Name="DEGER" ColumnName="DEGER" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

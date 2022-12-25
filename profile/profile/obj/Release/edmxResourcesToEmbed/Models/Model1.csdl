@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Skill_Profile_EntityModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Diller">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DillAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DEGER" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Yetenekler">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="YetenekAD" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DEGER" Type="Byte" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="Skill_Profile_EntityEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Dillers" EntityType="Self.Diller" />
+    <EntitySet Name="Yeteneklers" EntityType="Self.Yetenekler" />
+  </EntityContainer>
+</Schema>

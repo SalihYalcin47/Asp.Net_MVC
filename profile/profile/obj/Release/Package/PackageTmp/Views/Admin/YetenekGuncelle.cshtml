@@ -1,0 +1,22 @@
+﻿@model profile.Models.Yetenekler
+@{
+    ViewBag.Title = "YetenekGuncelle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<form class="form-group" method="post">
+    <div>
+        <label>yetenek Adı :</label><br />
+        @Html.TextBoxFor(x => x.YetenekAD, new { @class = "form-control" })
+    </div>
+    <br />
+    <div>
+        <label>Yetenek Değeri :</label><br />
+        @Html.TextBoxFor(x => x.DEGER, new { @class = "form-control" })
+    </div>
+    <br />
+    <div>
+        <button class="btn btn-success form-control">Güncelle</button>
+    </div>
+</form>
+

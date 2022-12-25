@@ -1,0 +1,50 @@
+﻿@model profile.Models.viewmodel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<table class="table table-hover table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ADI (Mesleki Hizmetleri)</th>
+        <th>DEGERI</th>
+        <th>Kaldır</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var x in Model.yeteneklers)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.YetenekAD</td>
+            <td>@x.DEGER</td>
+            <td><a href="/Admin/YetenekSil/@x.ID" class="btn btn-danger form-control">Kaldır</a> </td>
+            <td><a href="/Admin/YetenekGuncelle/@x.ID" class="btn btn-success form-control">Güncelle</a> </td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniYetenek/" class="btn btn-primary form-control">Yeni Yetenek Ekle</a>
+<br />
+<br />
+<table class="table table-hover table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>ADI (Dill Hizmetleri)</th>
+        <th>DEGERI</th>
+        <th>Kaldır</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var y in Model.dillers)
+    {
+        <tr>
+            <td>@y.ID</td>
+            <td>@y.DillAD</td>
+            <td>@y.DEGER</td>
+            <td><a href="/Admin/DilSil/@y.ID" class="btn btn-danger form-control">Kaldır</a> </td>
+            <td><a href="/Admin/DilGuncelle/@y.ID" class="btn btn-success form-control">Güncelle</a> </td>
+        </tr>
+    }
+</table>
+<a href="/Admin/YeniDil/" class="btn btn-primary form-control">Yeni Dil Ekle</a>

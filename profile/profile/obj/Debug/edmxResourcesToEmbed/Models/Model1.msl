@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Skill_Profile_EntityModelStoreContainer" CdmEntityContainer="Skill_Profile_EntityEntities">
+    <EntitySetMapping Name="Dillers">
+      <EntityTypeMapping TypeName="Skill_Profile_EntityModel.Diller">
+        <MappingFragment StoreEntitySet="Dillers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="DillAD" ColumnName="DillAD" />
+          <ScalarProperty Name="DEGER" ColumnName="DEGER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Yeteneklers">
+      <EntityTypeMapping TypeName="Skill_Profile_EntityModel.Yetenekler">
+        <MappingFragment StoreEntitySet="Yeteneklers">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="YetenekAD" ColumnName="YetenekAD" />
+          <ScalarProperty Name="DEGER" ColumnName="DEGER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
